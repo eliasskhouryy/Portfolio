@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Fourth() {
+export default function Fifth() {
 	return (
-		<div className="fourth">
+		<div className="fifth">
 			<h2>
 				<br />
 				<span>01. </span> About me <hr></hr>{' '}

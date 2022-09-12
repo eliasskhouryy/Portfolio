@@ -1,5 +1,6 @@
 .burger {
 	position: sticky;
+	z-index: 20;
 	top: 0px;
 	width: 100vw;
 	background-color: #22283160;
@@ -43,6 +44,7 @@
 			vertical-align: middle;
 			font-size: 0.9em;
 			font-weight: 400;
+
 			span {
 				color: #00adb5;
 			}
@@ -75,4 +77,7 @@
 			}
 		}
 	}
+}
+.active {
+	background-color: black;
 }

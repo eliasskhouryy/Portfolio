@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import './nav.scss';
 
-export default function Nav({ first, second, third, fourth }) {
+export default function Nav({ first, second, third, fourth, fifth }) {
 	function openResume() {
 		window.open(pdf, '_blank');
 	}
@@ -21,16 +21,16 @@ export default function Nav({ first, second, third, fourth }) {
 				</li>
 				<li>
 					<a onClick={third}>
-						<span>02. </span>Experience
+						<span>02. </span>Projects
 					</a>
 				</li>
 				<li>
 					<a onClick={fourth}>
-						<span>03. </span>Work
+						<span>03. </span>Experience
 					</a>
 				</li>
 				<li>
-					<a>
+					<a onClick={fifth}>
 						<span>04. </span>Contact
 					</a>
 				</li>
