@@ -18,8 +18,33 @@ export default function Nav() {
 	};
 	return (
 		<div className='burger'>
-			<h3>&lt;Elias /&gt;</h3>
-			<Button
+			<h3>Elias </h3>
+			<ul>
+				<li>
+					<a href=''>
+						<span>01. </span>About
+					</a>
+				</li>
+				<li>
+					<a href=''>
+						<span>02. </span>Experience
+					</a>
+				</li>
+				<li>
+					<a href=''>
+						<span>03. </span>Work
+					</a>
+				</li>
+				<li>
+					<a href=''>
+						<span>04. </span>Contact
+					</a>
+				</li>
+				<li>
+					<button>Resume</button>
+				</li>
+			</ul>
+			{/* <Button
 				id='demo-positioned-button'
 				aria-controls={open ? "demo-positioned-menu" : undefined}
 				aria-haspopup='true'
@@ -46,7 +71,7 @@ export default function Nav() {
 				<MenuItem onClick={handleClose}>Profile</MenuItem>
 				<MenuItem onClick={handleClose}>My account</MenuItem>
 				<MenuItem onClick={handleClose}>Logout</MenuItem>
-			</Menu>
+			</Menu> */}
 		</div>
 	);
 }
