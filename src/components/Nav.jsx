@@ -1,47 +1,41 @@
-import React, { useState } from "react";
-import { Twirl as Hamburger } from "hamburger-react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import "./nav.scss";
+import React, { useState, useRef } from 'react';
+import pdf from '../assets/Resume.pdf';
+import { Twirl as Hamburger } from 'hamburger-react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import './nav.scss';
 
-export default function Nav() {
-	const [isOpen, setOpen] = useState(false);
-
-	const [anchorEl, setAnchorEl] = React.useState(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
+export default function Nav({ first, second, third, fourth }) {
+	function openResume() {
+		window.open(pdf, '_blank');
+	}
 	return (
-		<div className='burger'>
-			<h3>Elias </h3>
+		<div className="burger">
+			<h2 onClick={first}>E </h2>
 			<ul>
 				<li>
-					<a href=''>
+					<a onClick={second}>
 						<span>01. </span>About
 					</a>
 				</li>
 				<li>
-					<a href=''>
+					<a onClick={third}>
 						<span>02. </span>Experience
 					</a>
 				</li>
 				<li>
-					<a href=''>
+					<a onClick={fourth}>
 						<span>03. </span>Work
 					</a>
 				</li>
 				<li>
-					<a href=''>
+					<a>
 						<span>04. </span>Contact
 					</a>
 				</li>
 				<li>
-					<button>Resume</button>
+					<button onClick={openResume}>Resume</button>
 				</li>
 			</ul>
 			{/* <Button
