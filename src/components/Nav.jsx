@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Twirl as Hamburger } from 'hamburger-react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import './menu.scss';
+import React, { useState } from "react";
+import { Twirl as Hamburger } from "hamburger-react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import "./nav.scss";
 
 export default function Nav() {
 	const [isOpen, setOpen] = useState(false);
@@ -17,24 +17,30 @@ export default function Nav() {
 		setAnchorEl(null);
 	};
 	return (
-		<div className="burger">
+		<div className='burger'>
 			<h3>&lt;Elias /&gt;</h3>
-			<Button id="demo-positioned-button" aria-controls={open ? 'demo-positioned-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick}>
+			<Button
+				id='demo-positioned-button'
+				aria-controls={open ? "demo-positioned-menu" : undefined}
+				aria-haspopup='true'
+				aria-expanded={open ? "true" : undefined}
+				onClick={handleClick}
+			>
 				<Hamburger toggled={isOpen} toggle={setOpen} />
 			</Button>
 			<Menu
-				id="demo-positioned-menu"
-				aria-labelledby="demo-positioned-button"
+				id='demo-positioned-menu'
+				aria-labelledby='demo-positioned-button'
 				anchorEl={anchorEl}
 				open={open}
 				onClose={handleClose}
 				anchorOrigin={{
-					vertical: 'top',
-					horizontal: 'left',
+					vertical: "top",
+					horizontal: "left",
 				}}
 				transformOrigin={{
-					vertical: 'top',
-					horizontal: 'left',
+					vertical: "top",
+					horizontal: "left",
 				}}
 			>
 				<MenuItem onClick={handleClose}>Profile</MenuItem>
