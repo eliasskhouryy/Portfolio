@@ -22,6 +22,7 @@ export default function Second() {
 					<a onClick={() => window.open('mailto:eliaskhouryy@hotmail.com?subject=Hello Elias!&body=What would you like to say?')}>email</a> or connect with me via{' '}
 					<a href="https://www.linkedin.com/in/eliasjkhoury/">LinkedIn</a>.
 				</p>
+				<img src="portrait.jpg" alt="" />
 			</div>
 		</div>
 	);

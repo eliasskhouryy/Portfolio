@@ -81,3 +81,35 @@
 .active {
 	background-color: black;
 }
+
+.display {
+	display: none;
+}
+.hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 750px) {
+	.hamburger {
+		display: inline;
+	}
+	.menu {
+		position: absolute;
+		background-color: #222831;
+		top: 108px;
+		right: 0;
+		transition: 1s;
+		ul {
+			display: block;
+			transition: 1s;
+
+			li {
+				display: block;
+				padding: 20px;
+			}
+		}
+	}
+	.topNav {
+		display: none;
+	}
+}

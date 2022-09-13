@@ -5,7 +5,7 @@ export default function Third() {
 		<div className="third">
 			<h2>
 				<br />
-				<span>01. </span> Some of my creations <hr />{' '}
+				<span>02. </span> Few of my creations <hr />{' '}
 			</h2>
 			<div className="leftProject">
 				<h3>
@@ -31,9 +31,7 @@ export default function Third() {
 					Created a functioning social media application that allows new musicians to share their soundcloud music to a feed, as well as create user profiles with bcrypt authentication. Both
 					front and backend were developed with Ruby on Rails.
 				</p>
-				<h4>
-					Ruby on Rails, Heroku, GitHub pages, <br /> CSS & Bootstrap
-				</h4>
+				<h4>Ruby on Rails, Heroku, GitHub pages, CSS & Bootstrap</h4>
 				<img src="./musik.png" alt="" />
 			</div>
 			<div className="leftProject2">

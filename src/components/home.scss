@@ -31,7 +31,46 @@
 		margin-left: 12px;
 	}
 }
-
+.leftOverlayContent2 {
+	display: none;
+	position: fixed;
+	margin-left: 7px;
+	bottom: 0px;
+	z-index: 10;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			display: block;
+			.verticle {
+				writing-mode: vertical-rl;
+				font-family: 'Fira Code', monospace;
+				font-size: 1em;
+				padding-left: 3px;
+			}
+			a {
+				text-decoration: none;
+				cursor: pointer;
+				color: #00adb5;
+				font-size: 1.6em;
+				max-width: 40px;
+				&:hover {
+					color: #eeeeee;
+					opacity: 0.7;
+				}
+			}
+			padding-top: 10px;
+			&:hover {
+				padding-bottom: 3px;
+			}
+		}
+	}
+	.leftOverlay {
+		border-left: 2px solid #00adb580;
+		height: 120px;
+		margin-left: 12px;
+	}
+}
 .rightOverlayContent {
 	position: fixed;
 	right: 40px;
@@ -71,15 +110,17 @@
 .third,
 .fourth,
 .fifth {
-	height: 100vh;
 	width: 100vw;
+	min-height: 100vh;
 	text-align: center;
 	color: #eeeeee;
 	margin: 0 auto;
 	max-width: 900px;
 	text-align: left;
 	padding: 40px;
+
 	h2 {
+		letter-spacing: 1.3px;
 		span {
 			font-family: 'Fira Code', monospace;
 			font-size: 0.9em;
@@ -95,6 +136,7 @@
 }
 
 .first {
+	padding-top: 10px;
 	h1 {
 		font-weight: 700;
 		letter-spacing: 1.9px;
@@ -135,6 +177,7 @@
 }
 
 .second {
+	width: 100%;
 	p {
 		font-size: 1em;
 		font-family: 'Fira Code', monospace;
@@ -147,14 +190,24 @@
 			}
 		}
 	}
+	img {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+		margin-top: 20px;
+		object-fit: cover;
+		box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
+	}
 }
 
 .third {
-	max-width: 1050px;
-
+	margin-bottom: 100px;
 	.leftProject {
 		text-align: right;
 		position: relative;
+		height: 350px;
 		h3 {
 			margin-bottom: 0;
 			top: 10px;
@@ -180,13 +233,14 @@
 			top: 80px;
 			right: 0;
 			z-index: 1;
+
+			width: 50%;
+			display: inline-block;
 			box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
 				rgba(0, 0, 0, 0.07) 0px 32px 64px;
 			border-radius: 3px;
 			background-color: #393e46;
 			padding: 10px;
-			width: 50%;
-			display: inline-block;
 		}
 		img {
 			position: absolute;
@@ -201,6 +255,7 @@
 			position: absolute;
 			right: 0;
 			top: 230px;
+			width: 250px;
 			padding-right: 10px;
 			font-family: 'Fira Code', monospace;
 			font-weight: 300;
@@ -209,7 +264,8 @@
 	.rightProject {
 		text-align: left;
 		position: relative;
-		top: 400px;
+		height: 350px;
+
 		h3 {
 			margin-bottom: 0;
 			top: 10px;
@@ -259,12 +315,13 @@
 			padding-right: 10px;
 			font-family: 'Fira Code', monospace;
 			font-weight: 300;
+			width: 250px;
 		}
 	}
 	.leftProject2 {
 		text-align: right;
 		position: relative;
-		top: 800px;
+		height: 350px;
 		h3 {
 			margin-bottom: 0;
 			top: 10px;
@@ -314,10 +371,410 @@
 			padding-right: 10px;
 			font-family: 'Fira Code', monospace;
 			font-weight: 300;
+			width: 250px;
 		}
 	}
 }
 
 .fourth {
-	margin-top: 600px;
+	display: table;
+	margin: 0 auto;
+
+	ul.work {
+		text-align: center;
+		font-family: 'Fira Code', monospace;
+		font-weight: 400;
+		li {
+			cursor: pointer;
+			display: inline;
+			padding: 8px 14px;
+			margin: 0 5px;
+			list-style: none;
+			background-color: #00adb5;
+			color: #222831;
+			border-radius: 2px;
+			&:hover {
+				box-shadow: #eeeeee 0px 0px 0px 2px;
+				transition: 0.5s ease-in-out;
+			}
+		}
+		.clicked {
+			background-color: #393e46;
+			color: #00adb5;
+		}
+	}
+	.telstra {
+		background-color: #00adb5;
+		color: #222831;
+		padding: 20px;
+		border-radius: 2px;
+		display: flex;
+		justify-content: space-between;
+		.text {
+			width: 60%;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		img {
+			width: 30%;
+			object-fit: contain;
+		}
+	}
+	.goHock {
+		background-color: #00adb5;
+		color: #222831;
+		padding: 20px;
+		border-radius: 2px;
+		display: flex;
+		justify-content: space-between;
+		.text {
+			width: 60%;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		img {
+			width: 30%;
+
+			object-fit: contain;
+		}
+	}
+	.display {
+		display: none;
+	}
+
+	.stack {
+		padding: 20px;
+		h2 {
+			text-align: center;
+			font-family: 'Fira Code', monospace;
+		}
+		h3 {
+			text-align: center;
+			font-family: 'Fira Code', monospace;
+			font-weight: 400;
+		}
+		ul.techList {
+			list-style: none;
+			background-color: #393e46;
+			padding: 20px;
+			border-radius: 3px;
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+			li {
+				text-align: center;
+				span {
+					display: block;
+					text-align: center;
+					font-size: 3em;
+				}
+				display: inline-block;
+				margin: 5px 20px;
+				font-family: 'Fira Code', monospace;
+				font-weight: 300;
+				font-size: 0.9em;
+			}
+		}
+	}
+}
+
+.fifth {
+	text-align: center;
+	padding-top: 20vh;
+	h3 {
+		font-family: 'Fira Code', monospace;
+		font-size: 1em;
+		font-weight: 300;
+	}
+	h2 {
+		color: #00adb5;
+		font-size: 2.8em;
+		letter-spacing: 1.5px;
+		margin-bottom: 0;
+	}
+	p {
+		letter-spacing: 1.2px;
+	}
+	button {
+		margin-top: 1em;
+		background: 0;
+		color: white;
+		border: 2px solid grey;
+		padding: 14px 20px;
+		border-radius: 3px;
+		transition: 0.5s;
+		font-family: 'Fira Code', monospace;
+		font-weight: 400;
+		font-size: 1em;
+		cursor: pointer;
+		&:hover {
+			box-shadow: inset 17em 0 0 0 grey;
+		}
+	}
+	h4 {
+		font-family: 'Fira Code', monospace;
+		opacity: 0.6;
+		font-weight: 300;
+		width: 100%;
+		margin-bottom: 0;
+		margin-top: 30%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.leftOverlayContent,
+	.rightOverlayContent {
+		display: none;
+	}
+	.leftOverlayContent2 {
+		display: inline;
+	}
+	.first,
+	.second,
+	.third,
+	.fourth,
+	.fifth {
+		max-width: 100vw;
+		padding-left: 50px;
+	}
+
+	.third {
+		margin-bottom: 100px;
+		position: inherit;
+		.leftProject {
+			position: inherit;
+			height: auto;
+			text-align: right;
+			h3 {
+				position: inherit;
+
+				margin-bottom: 0;
+
+				font-size: 2em;
+
+				a {
+					text-decoration: none;
+					color: #00adb5;
+					padding: 6px 10px;
+
+					border-radius: 3px;
+					&:hover {
+						transition: 0.5s ease-in-out;
+
+						box-shadow: #00adb580 0px 0px 0px 3px;
+					}
+				}
+			}
+			p {
+				position: inherit;
+				display: inline-block;
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+				background-color: #393e46;
+				padding: 10px;
+			}
+			img {
+				position: inherit;
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+			}
+			h4 {
+				position: inherit;
+				top: 230px;
+				width: 100%;
+				padding-right: 10px;
+				font-family: 'Fira Code', monospace;
+				font-weight: 300;
+			}
+		}
+		.rightProject {
+			text-align: left;
+			position: inherit;
+			height: auto;
+
+			h3 {
+				margin-bottom: 0;
+				font-size: 2em;
+				position: inherit;
+
+				a {
+					text-decoration: none;
+					color: #00adb5;
+					padding: 6px 10px;
+					border-radius: 3px;
+					&:hover {
+						transition: 0.5s ease-in-out;
+
+						box-shadow: #00adb580 0px 0px 0px 3px;
+					}
+				}
+			}
+			p {
+				position: inherit;
+				width: 100%;
+
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+				background-color: #393e46;
+				padding: 10px;
+				display: inline-block;
+			}
+			img {
+				position: inherit;
+
+				z-index: 0;
+				right: 0;
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+			}
+			h4 {
+				position: inherit;
+				padding-right: 10px;
+				font-family: 'Fira Code', monospace;
+				font-weight: 300;
+				width: 100%;
+			}
+		}
+		.leftProject2 {
+			text-align: right;
+			position: inherit;
+			height: auto;
+			h3 {
+				margin-bottom: 0;
+				top: 10px;
+				right: 0;
+				font-size: 2em;
+				position: inherit;
+
+				a {
+					text-decoration: none;
+					color: #00adb5;
+					padding: 6px 10px;
+
+					border-radius: 3px;
+					&:hover {
+						transition: 0.5s ease-in-out;
+
+						box-shadow: #00adb580 0px 0px 0px 3px;
+					}
+				}
+			}
+			p {
+				position: inherit;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+				background-color: #393e46;
+				padding: 10px;
+				width: 100%;
+				display: inline-block;
+			}
+			img {
+				position: inherit;
+				z-index: 0;
+				left: 0;
+				width: 100%;
+				box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+					rgba(0, 0, 0, 0.07) 0px 32px 64px;
+				border-radius: 3px;
+			}
+			h4 {
+				position: inherit;
+				padding-right: 10px;
+				font-family: 'Fira Code', monospace;
+				font-weight: 300;
+				width: auto;
+			}
+		}
+	}
+	.third {
+		.leftProject,
+		.rightProject,
+		.leftProject2 {
+			img {
+				width: 70%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.first {
+		h1 {
+			font-weight: 700;
+			letter-spacing: 1.9px;
+			font-size: 3em;
+			margin-bottom: 0;
+			margin-top: 0;
+			color: #00adb5;
+		}
+		h2 {
+			margin-top: 0.5em;
+			letter-spacing: 1.5px;
+			font-size: 3em;
+			font-weight: 700;
+			opacity: 0.8;
+		}
+	}
+	.fifth {
+		h4 {
+			margin-top: 38%;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.third {
+		.leftProject,
+		.rightProject,
+		.leftProject2 {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.first {
+		h1 {
+			font-weight: 700;
+			letter-spacing: 1.9px;
+			font-size: 2.2em;
+			margin-bottom: 0;
+			margin-top: 0;
+			color: #00adb5;
+		}
+		h2 {
+			margin-top: 0.5em;
+			letter-spacing: 1.5px;
+			font-size: 2em;
+			font-weight: 700;
+			opacity: 0.8;
+		}
+	}
+	.fourth {
+		.telstra,
+		.goHock {
+			display: block;
+			.text {
+				width: 100%;
+			}
+		}
+	}
+	.fifth {
+		h4 {
+			margin-top: 50%;
+		}
+	}
 }
