@@ -8,8 +8,9 @@ export const experiences = [
 		company: 'Shine Solutions',
 		position: 'Software Engineer',
 		duration: 'Dec 2022 - Present',
-		description: 'Software developer role, which mainly included full-stack development. During my tenure at CompanyA, I expanded my knowledge in various tech stacks.',
-		techStack: 'Tech Stack: Node.js, Express, React, Redux, MongoDB.',
+		description:
+			'In this position, I joined the mobile app development team as a Native Android Developer, utilizing the Android SDK framework and programming in Kotlin. Test Driven Development - with JUnit and Mockito.',
+		techStack: 'Tech Stack: Kotlin, Android SDK, BitBucket, JUnit, Mockito, Firebase, CI/CD, Jira, Confluence, Slack, and Zoom.',
 		logo: 'shine.png',
 	},
 	{

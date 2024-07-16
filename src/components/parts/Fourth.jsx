@@ -12,7 +12,7 @@ export default function Fourth() {
 		<div className="fourth">
 			<h2>
 				<br />
-				<span>03. </span> Relevant Experience <hr></hr>{' '}
+				<span>03. </span> Relevant Experience <hr />
 			</h2>
 			<nav>
 				<ul className="work">
